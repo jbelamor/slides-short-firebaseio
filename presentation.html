@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Is your database on (FIRE)base?</title>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/css/theme/solarized.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Is your database on (FIRE)base?</h1><p class="date">Created: 2020-01-23 Thu 13:19</p>
+</section>
+<section>
+<section id="slide-org1d45c7d" data-background="./img/background.png">
+<h2 id="org1d45c7d">Who am I?</h2>
+<ul>
+<li class="fragment appear">Joel Beleña de Lamor (yes Lamor, that's why my web is jbelamor.com)</li>
+<li class="fragment appear">Pentester &amp;&amp; cybersecurity researcher (Zorya)</li>
+<li class="fragment appear">Student at 42</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org1dcbd09" data-background="./img/background.png">
+<h2 id="org1dcbd09">Let's start</h2>
+<div class="outline-text-2" id="text-org1dcbd09">
+</div>
+</section>
+<section id="slide-org0291e1e" data-background="./img/background.png">
+<h3 id="org0291e1e">Firebase Realtime Database</h3>
+<div class="outline-text-3" id="text-org0291e1e">
+</div>
+</section>
+<section id="slide-org8a7eaf3" data-background="./img/background.png">
+<h4 id="org8a7eaf3">What is it?</h4>
+<ul>
+<li class="fragment appear">Google service</li>
+<li class="fragment appear">Android apps (or any other project)</li>
+<li class="fragment appear">Authentication</li>
+<li class="fragment appear">NoSQL Database - JSON file</li>
+<li class="fragment appear">Updated on realtime</li>
+
+</ul>
+</section>
+<section id="slide-org3aaf597" data-background="./img/background.png">
+<h3 id="org3aaf597">Two important things</h3>
+<ul>
+<li class="fragment appear">Configuration</li>
+<li class="fragment appear">API REST</li>
+
+</ul>
+</section>
+<section id="slide-orgff056b5" data-background="./img/background.png">
+<h4 id="orgff056b5">Configuration</h4>
+<p>
+Rules
+</p>
+
+<div class="figure">
+<p><img src="./img/no_config.png" alt="no_config.png" class="fragment (appear)" />
+</p>
+</div>
+</section>
+<section id="slide-org9b6235d" data-background="./img/background.png">
+<h4 id="org9b6235d">API REST</h4>
+<pre  class="example">
+https://&lt;name_of_the_project_firebase&gt;.firebaseio.com/&lt;database_name&gt;.json
+</pre>
+<pre  class="fragment (appear)">
+https://&lt;name_of_the_project_firebase&gt;.firebaseio.com/.json
+</pre>
+</section>
+</section>
+<section>
+<section id="slide-orge173680" data-background="./img/background.png">
+<h2 id="orge173680">Research</h2>
+<div class="outline-text-2" id="text-orge173680">
+</div>
+</section>
+<section id="slide-org5cc729e" data-background="./img/background.png">
+<h3 id="org5cc729e">Purpose</h3>
+<ul>
+<li class="fragment appear">Get samples</li>
+<li class="fragment appear">Look for links "firebaseio.com"</li>
+<li class="fragment appear">Check security</li>
+<li class="fragment appear">Analyze the results</li>
+
+</ul>
+</section>
+<section id="slide-org90613f9" data-background="./img/background.png">
+<h3 id="org90613f9">Get Samples</h3>
+<ul>
+<li class="fragment appear">Github - API</li>
+<li class="fragment appear">Android Applications</li>
+<li class="fragment appear">(Future) pastebin, code snippet&#x2026;</li>
+
+</ul>
+</section>
+<section id="slide-org34aeaa9" data-background="./img/background.png">
+<h3 id="org34aeaa9">Test configuration</h3>
+<ul>
+<li class="fragment appear">Can I read?</li>
+<li class="fragment appear">Can I write?</li>
+
+</ul>
+</section>
+<section id="slide-orgdaf6cdd" data-background="./img/background.png">
+<h3 id="orgdaf6cdd">Analyzing the data</h3>
+<p>
+What can we find?
+</p>
+<ul>
+<li class="fragment appear">Phone numbers</li>
+<li class="fragment appear">Emails</li>
+<li class="fragment appear">Passwords</li>
+<li class="fragment appear">Credit cards</li>
+<li class="fragment appear">National IDs</li>
+
+</ul>
+</section>
+<section id="slide-orgdaf6cdd-split" data-background="./img/background.png">
+<p>
+How can we found it?
+</p>
+<ul>
+<li class="fragment appear">Regex</li>
+<li class="fragment appear">Keywords</li>
+
+</ul>
+</section>
+<section id="slide-orgcfa54a9" data-background="./img/background.png">
+<h3 id="orgcfa54a9">Risks</h3>
+<div class="outline-text-3" id="text-orgcfa54a9">
+</div>
+</section>
+<section id="slide-org23b95be" data-background="./img/background.png">
+<h4 id="org23b95be">As a user</h4>
+<ul>
+<li class="fragment appear">Leaked info</li>
+<li class="fragment appear">You can change your passwords, but not your ID</li>
+
+</ul>
+</section>
+<section id="slide-orgae3d6fa" data-background="./img/background.png">
+<h4 id="orgae3d6fa">As a company</h4>
+<ul>
+<li class="fragment appear">Reputation (leaked data or malware distribution)</li>
+<li class="fragment appear">Money (DoS or abuse of the ifraestructure)</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orge72b318" data-background="./img/background.png">
+<h2 id="orge72b318">Results</h2>
+<div class="outline-text-2" id="text-orge72b318">
+</div>
+</section>
+<section id="slide-org90f4ffa" data-background="./img/background.png">
+<h3 id="org90f4ffa">Github</h3>
+<ul>
+<li>Repos using Firebase: 1221</li>
+<li>Unique links to Firebase: 941</li>
+<li>Vulnerable links: 407</li>
+
+</ul>
+</section>
+<section id="slide-orgb8b3a1d" data-background="./img/background.png">
+<h3 id="orgb8b3a1d">Android</h3>
+<ul>
+<li>Total amount of downloaded apps: 12858</li>
+<li>Apps using Firebase: 2743</li>
+<li>Unique links to Firebase: 2544</li>
+<li>Vulnerable links: 210</li>
+
+</ul>
+</section>
+<section id="slide-org1d94dc0" data-background="./img/background.png">
+<h3 id="org1d94dc0">Exposed data</h3>
+<!-- This HTML table template is generated by emacs 26.1 -->
+<table border="1">
+  <tr>
+    <td align="left" valign="top">
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      Github&nbsp;
+    </td>
+    <td align="left" valign="top">
+      Android
+    </td>
+    <td align="left" valign="top">
+      Total&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+      Amount&nbsp;of&nbsp;&nbsp;<br />
+      databases&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      407&nbsp;&nbsp;&nbsp;&nbsp;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      210&nbsp;&nbsp;&nbsp;&nbsp;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      617&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+      Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      39%&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      20%&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      32%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+      Password&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      25%&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      23%&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      25%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+      Credit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+      cards&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      10%&nbsp;&nbsp;&nbsp;&nbsp;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      15%&nbsp;&nbsp;&nbsp;&nbsp;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      12%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td align="left" valign="top">
+      Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+      numbers&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      24%&nbsp;&nbsp;&nbsp;&nbsp;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      22%&nbsp;&nbsp;&nbsp;&nbsp;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+    <td align="left" valign="top">
+      23%&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </td>
+  </tr>
+</table>
+</section>
+</section>
+<section>
+<section id="slide-orga176db2" data-background="./img/background.png">
+<h2 id="orga176db2">DEMO</h2>
+</section>
+</section>
+<section>
+<section id="slide-org1b21a23" data-background="./img/background.png">
+<h2 id="org1b21a23">Conclusions</h2>
+<p>
+As a company&#x2026;
+</p>
+<ul>
+<li class="fragment appear">Make developers aware of the security</li>
+<li class="fragment appear">Periodical reviews of our products</li>
+
+</ul>
+</section>
+<section id="slide-org1b21a23-split" data-background="./img/background.png">
+<p>
+As a user&#x2026;
+</p>
+<ul>
+<li class="fragment appear">Trust no one</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-org4528682" data-background="./img/background.png">
+<h2 id="org4528682">Questions?</h2>
+<ul>
+<li>Web: jbelamor.com</li>
+<li>LinkedIn: www.linkedin.com/in/jbelamor</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: './reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: './reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
