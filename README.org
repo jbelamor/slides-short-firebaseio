@@ -1,7 +1,7 @@
 * Is your database on FIREbase?
 
-Event: Meetup Secops #3
-Location: Paris, France
-Date: 23/01/2019
-Link to the talk: https://youtu.be/Ja_y-eGWJIg?t=3983
-Description: This talk is a resume of a research conducted while I was in S2, with the purpose of knowing the situation regarding to projects (specially Android apps), using a Firebase Realtime Database with an unsafe configuration.
+- Event: Meetup Secops #3
+- Location: Paris, France
+- Date: 23/01/2019
+- Link to the talk: https://youtu.be/Ja_y-eGWJIg?t=3983
+- Description: This talk is a resume of a research conducted while I was in S2, with the purpose of knowing the situation regarding to projects (specially Android apps), using a Firebase Realtime Database with an unsafe configuration.
